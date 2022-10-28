@@ -1,0 +1,46 @@
+.header_container {
+    display: flex;
+    background: var(--blue_dark);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav {
+    width: 100%;
+}
+
+.logo_eliteserien {
+    width: 80px;
+    aspect-ratio: 1;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+a:focus {
+    color: white;
+}
+
+
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+    color: white;
+    height: 100%;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+}
+
+li:hover{
+    background: var(--blue_light);
+}

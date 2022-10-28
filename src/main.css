@@ -1,0 +1,8 @@
+* {
+    margin: 0;
+}
+:root {
+    --blue_dark: rgb(16,37,62);
+    --blue_light: rgb(0,169,224);
+    --grey_light: rgb(242,242,242);
+  }

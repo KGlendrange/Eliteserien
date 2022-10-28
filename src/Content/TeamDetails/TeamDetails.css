@@ -1,0 +1,27 @@
+.title{
+    display: flex;
+    color: var(--blue_dark);
+    margin-bottom: 1em;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media  only screen and (max-device-width : 960px) {
+    .title {
+        flex-direction: row;
+        top: 0;
+    }
+}
+
+.title img {
+    height: 100px;
+    object-fit: fill;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.teamDetails-table__name {
+    width: 200px;
+}

@@ -1,0 +1,59 @@
+
+.league {
+    position: sticky;
+    top: 118px;
+    height: 100%;
+    z-index: 9;
+}
+
+@media  only screen and (max-device-width : 960px) {
+    .league {
+        position: relative;
+        top: 0;
+    }
+}
+
+
+table {
+    border: 5px solid var(--blue_dark);
+    border-collapse: collapse;
+}
+
+
+thead {
+    background: var(--blue_dark);
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+th {
+    padding: 8px;
+    text-align: left;
+}
+
+td {
+    padding: 8px;
+    text-align: right;
+    color: var(--blue_dark);
+    font-size: 24px;
+}
+
+tr:nth-child(even){
+    background: var(--grey_light);
+}
+
+.name{
+    text-align: left;
+    font-weight: bold;
+}
+
+tbody tr:hover {
+    background: var(--blue_light);
+}
+
+.toggleInitials {
+    background: var(--blue_dark);
+    color: white;
+    font-weight: bold;
+}
