@@ -13,7 +13,7 @@ interface TableProps {
     setSelectedTeam: (value: Team) => void;
 }
 export function Table({teams, setSelectedTeam} : TableProps){
-    const [shortInitials, setShortInitials] = useState(true);
+    const [shortInitials, setShortInitials] = useState(false);
 
     return (
         <div className="league">
@@ -52,9 +52,11 @@ interface RowProps {
 }
 function Row({team, setSelectedTeam} : RowProps) {
     const data = team.data;
-    console.log("key:", team);
     return (
-        <tr key={team.participant.id} onClick={() => setSelectedTeam(team)}>
+        <tr key={team.participant.id} onClick={() => {
+            setSelectedTeam(team);
+            window.scrollTo({top: 0, behavior: "smooth"})
+        }}>
             <td>
                 {team.rank}
             </td>

@@ -25,3 +25,7 @@
 .teamDetails-table__name {
     width: 200px;
 }
+
+.date {
+    text-align: left;
+}

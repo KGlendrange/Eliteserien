@@ -46,8 +46,8 @@ interface RowProps {
 function Row({selectedTeam, match, setSelectedTeam} : RowProps) {
     const opponent : Team  | undefined = match.participants.find((participant) => participant.participant.id !== selectedTeam.participant.id);
     return (<tr key={match.id}>
-        <td>
-            {match.startDate.split("T")[0]}
+        <td className="date">
+            {formatDate(match.startDate.split("T")[0])}
         </td>
         <td className="name" onClick={() => {
                 if(opponent) {
@@ -62,13 +62,17 @@ function Row({selectedTeam, match, setSelectedTeam} : RowProps) {
 
 function getLogo(team : Team) {
     const path = removeNorwegianLetters(team.participant.name);
-    console.log(path);
     const url = new URL(`../../assets/${path}.png`, import.meta.url);
-    console.log(url);
     return url.href;
 }
 
 function removeNorwegianLetters(teamName: string){
     return teamName.toLowerCase().replace("å","aa").replace("ø","o").replace("fk ", "").replace("/","").split(" ")[0];
+}
+
+const monthNames = ["Januar","Februar","Mars","April","Mai","Juni","Juli","August","September","Oktober","November","Desember"];
+function formatDate(date: string) {
+    const [year, month, day] = date.split("-");
+    return `${day}. ${monthNames[parseInt(month)]}`
 }
 
